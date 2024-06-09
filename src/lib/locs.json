@@ -1,0 +1,106 @@
+{
+    "kvaddaa": {
+        "location": {
+            "from_x": 473,
+            "from_y": 130,
+            "to_x": 511,
+            "to_y": 153
+        },
+        "population": {
+            "old_drunkard": 0.05,
+            "minor": 0.45,
+            "baddie": 0.45
+        },
+        "specs": {
+            "new_customer_rate": 0.5
+        }
+    },
+    "ruten": {
+        "location": {
+            "from_x": 603,
+            "from_y": 87,
+            "to_x": 635,
+            "to_y": 118
+        },
+        "population": {
+            "old_drunkard": 0.7,
+            "minor": 0.2,
+            "baddie": 0.1
+        },
+        "specs": {
+            "new_customer_rate": 0.9
+        }
+    },
+    "uis": {
+        "location": {
+            "from_x": 208,
+            "from_y": 217,
+            "to_x": 231,
+            "to_y": 242
+        },
+        "population": {
+            "old_drunkard": 0.25,
+            "minor": 0.05,
+            "baddie": 0.7
+        },
+        "specs": {
+            "new_customer_rate": 1.2
+        }
+    },
+    "torvet": {
+        "location": {
+            "from_x": 77,
+            "from_y": 126,
+            "to_x": 119,
+            "to_y": 149
+        },
+        "population": {
+            "old_drunkard": 0.33,
+            "minor": 0.33,
+            "baddie": 0.34
+        },
+        "specs": {
+            "new_customer_rate": 0.8
+        }
+    },
+    "piren_pub": {
+        "location": {
+            "from_x": 78,
+            "from_y": 94,
+            "to_x": 113,
+            "to_y": 116
+        },
+        "population": {
+            "old_drunkard": 1,
+            "minor": 0,
+            "baddie": 0
+        },
+        "specs": {
+            "new_customer_rate": 1
+        }
+    },
+    "vaulen": {
+        "location": {
+            "from_x": 245,
+            "from_y": 83,
+            "to_x": 295,
+            "to_y": 102
+        },
+        "population": {
+            "old_drunkard": 0.05,
+            "minor": 0.4,
+            "baddie": 0.55
+        },
+        "specs": {
+            "new_customer_rate": 1.2
+        }
+    },
+    "glenn_ronny_trucking": {
+        "location": {
+            "from_x": 420,
+            "from_y": 219,
+            "to_x": 494,
+            "to_y": 279
+        }
+    }
+}

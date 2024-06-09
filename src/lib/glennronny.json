@@ -1,0 +1,62 @@
+{
+    "gunstermaskin": {
+        "beskrivelse": "Aldri bland gunster igjen, med denne nye maskinen fra GunsterGuys A/S kan du alltid oppnå den perfekte gunster, helt uten strev",
+        "price": 5000,
+        "location": {
+            "from_x": 345,
+            "from_y": 89,
+            "to_x": 404,
+            "to_y": 147
+        }
+    },
+    "reklameskilt": {
+        "beskrivelse": "Gunster er ikke bare en drink, det er en bevegelse. Spre budskapet, få flere følgere, kjøp et reklameskilt!\n \nFølgerene av bevegelsen din kommer til å vokse raskere.",
+        "price": 500,
+        "location": {
+            "from_x": 244,
+            "from_y": 149,
+            "to_x": 410,
+            "to_y": 204
+        }
+    },
+    "decoyvan": {
+        "beskrivelse": "Med denne falske van-en kan du sette den opp et sted som gjør at politiet tar feil gunstertruck. \n \n+1 liv",
+        "price": 1000,
+        "location": {
+            "from_x": 182,
+            "from_y": 155,
+            "to_x": 225,
+            "to_y": 204
+        }
+    },
+    "kamuflasje": {
+        "beskrivelse": "Med denne nyvinnende gunstertruckkamuflasjenettingen trenger du aldri igjen å bekymre deg for politiet. Eller kanskje.. Kanskje de fortsatt kan se deg, men denne burde sakke dem ned litt hvertfall.",
+        "price": 500,
+        "location": {
+            "from_x": 186,
+            "from_y": 114,
+            "to_x": 235,
+            "to_y": 150
+        }
+    },
+    "ekstrabokser": {
+        "beskrivelse": "Hell med to monsterflasker samtidig, eller to guinnessflasker samtidig. Dette burde gjøre deg til den raskeste gunstertenderen i Rogaland fylkeskommune!",
+        "price": 200,
+        "location": {
+            "from_x": 240,
+            "from_y": 114,
+            "to_x": 291,
+            "to_y": 143
+        }
+    },
+    "kurs": {
+        "beskrivelse": "Ta et kurs da. Kanskje kundene blir litt mer fornøyde med kvaliteten.",
+        "price": 1000,
+        "location": {
+            "from_x": 296,
+            "from_y": 115,
+            "to_x": 341,
+            "to_y": 140
+        }
+    }
+}
