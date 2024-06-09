@@ -31,7 +31,7 @@
     },
     "kamuflasje": {
         "beskrivelse": "Med denne nyvinnende gunstertruckkamuflasjenettingen trenger du aldri igjen å bekymre deg for politiet. Eller kanskje.. Kanskje de fortsatt kan se deg, men denne burde sakke dem ned litt hvertfall.\n \n-33% synlighet for politiet",
-        "price": 500,
+        "price": 375,
         "location": {
             "from_x": 186,
             "from_y": 114,
