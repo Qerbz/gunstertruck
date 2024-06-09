@@ -13,7 +13,7 @@
     let site = 0;
     let lokasjon = "piren_pub";
     let user = {
-        cash: 75,
+        cash: 0,
         kamuflasje: false, // implemented
         reklameskilt: false, // implemented
         kurs: false, // implemented
