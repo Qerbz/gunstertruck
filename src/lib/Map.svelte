@@ -47,14 +47,14 @@ on:click={() => {
 
 <style>
     #a {
-        background-image: url("nordjaeren.png");
+        background-image: url("/nordjaeren.png");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         width: 100vw;
         height: 100vh;
     }
     .reklame {
-        background-image: url("reklame.png");
+        background-image: url("/reklame.png");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         width: 15vw;

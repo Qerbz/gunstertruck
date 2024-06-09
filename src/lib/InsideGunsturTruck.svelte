@@ -338,14 +338,14 @@ on:click={serverGunster}>Server Gunster</button>
 
 <style>
     #a {
-        background-image: url("gunster_truck_inside.png");
+        background-image: url("/gunster_truck_inside.png");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         width: 100vw;
         height: 100vh;
     }
     #gunstermaskin {
-        background-image: url("gunstermaskin.png");
+        background-image: url("/gunstermaskin.png");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         width: 100vw;

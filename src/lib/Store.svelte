@@ -52,7 +52,7 @@ Du har kje nok penger, lillegutt. Du trenge `+json[key].price +`kr for å kjøba
 <Audio {lokasjon} {kundeSomFaarServert}></Audio>
 <style>
     #a {
-        background-image: url("glennronny.png");
+        background-image: url("/glennronny.png");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         width: 100vw;
