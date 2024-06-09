@@ -13,11 +13,11 @@
     let site = 0;
     let lokasjon = "piren_pub";
     let user = {
-        cash: 0,
+        cash: 10000,
         kamuflasje: false, // implemented
         reklameskilt: false, // implemented
         kurs: false, // implemented
-        decoyvan: false, // implemented
+        decoyvan: 0, // implemented
         gunstermaskin: false, // implemented
         ekstrabokser: false, // implemented
         guideline: false, 
@@ -26,7 +26,7 @@
 
     function checkPoliceScore(score) {
         if (score > 100) {
-            score = 0;
+            politiStore.set(0);
             user.liv -= 1
         }
         if (user.liv === 0) site = 6;

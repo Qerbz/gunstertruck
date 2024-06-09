@@ -11,6 +11,7 @@
     import { folgereStore } from "./folgere";
     import Audio from "$lib/Audio.svelte";
     import { onMount } from "svelte";
+    import Popup from "./Popup.svelte";
     
     export let user;
     export let lokasjon;
@@ -248,16 +249,25 @@
         servert_en_plass++;
         let gunsterScore = evaluateGunsterParts(gunsterParts) * 10;
         politiStore.update((verdi) => {
-            return verdi + 1.6*(kundeSomFaarServert.ettersokelse/(1+user.kamuflasje*0.5) + (10-gunsterScore)/10 + (servert_en_plass) / 100);
+            return verdi + 1.6*(kundeSomFaarServert.ettersokelse/(1+user.kamuflasje*0.5)/10 + (10-gunsterScore) + (servert_en_plass) / 100);
     });
         kundeSomFaarServert.status = "walking";
 
         kundeSomGaar.push(kundeSomFaarServert);
         kundeSomGaar = kundeSomGaar;
 
-        user.cash += (gunsterScore + gunsterScore * $folgereStore*0.002) * (user.kurs + 1) + kundeSomFaarServert.penger;
+        let cashEarned = (gunsterScore + gunsterScore * $folgereStore*0.002) * (user.kurs + 1) + kundeSomFaarServert.penger;
+        
+        user.cash += cashEarned;
         folgereStore.update((followers) => followers += followers * (0.02 + gunsterScore/100 + user.reklameskilt/50) + gunsterScore*4*(1+user.reklameskilt))
         gunsterParts = [];
+
+        new Popup({
+            props: {
+                number: cashEarned
+            },
+            target: document.body
+        });
 
         kundeSomFaarServert = null;
         
@@ -293,7 +303,7 @@
 <Glass x={glassX} y={glassY} {gunsterParts} guideline={user.guideline} />
 
 <button class="position"
-style={` top: ${windowHeight / 1.13}px; left: ${windowWidth / 2.84}px; z-index: 999;`} 
+style={` padding: 10px; top: ${windowHeight / 1.13}px; left: ${windowWidth / 2.84}px; z-index: 999;`} 
 on:click={serverGunster}>Server Gunster</button>
 
 <Bottle x={guinnessX} y={guinnessY} rotation={guinnessRotation} guinness on:click={() => {

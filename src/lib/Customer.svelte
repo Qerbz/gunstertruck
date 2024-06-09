@@ -18,6 +18,6 @@
         background-repeat: no-repeat;
         width: 30vw;
         height: 60vh;
-        z-index: -1;
+        z-index: -10;
     }
 </style>

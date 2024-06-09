@@ -1,35 +1,35 @@
 <script>
     import { onMount } from "svelte";
-  
-    let number = 0;
+    export let number;
+    let nodeRef;
   
     onMount(() => {
       setTimeout(() => {
         // Remove the component
-        document.body.removeChild($$.ctx.component);
-      }, 500);
+        nodeRef.parentNode.removeChild(nodeRef);
+      }, 1500);
     });
   
-    export let value;
-    
-    $: number = value.toFixed(1);
+
   </script>
-  
-  <div class="popup">
-    <p>{number}</p>
+
+  <div bind:this={nodeRef} class="popup">
+    <p>+ ${Math.round(number*10)/10}</p>
   </div>
+  
   
   <style>
     .popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #ffffff;
+      position: absolute;
+      top: 10vh;
+      left: 45vw;
       border: 1px solid #000000;
-      padding: 10px;
+      background: linear-gradient(to bottom, var(--foam) 0%, var(--foam) 4%, var(--guinness) 5%, var(--guinness) 45%, var(--monster) 55%, var(--monster) 100%);
+      color: white;
+      font-size: 250%;
+      padding: 0px 10px 0px 10px;
       border-radius: 5px;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
     }
   </style>
   

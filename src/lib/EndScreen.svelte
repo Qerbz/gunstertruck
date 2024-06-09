@@ -35,11 +35,13 @@
         counterElement.classList.add("fadeIn");
         let folgerePlussTall = 1;
 
-        if (Math.abs($folgereStore) > 100) folgerePlussTall = Math.round($folgereStore * 0.005);
+        if (Math.abs($folgereStore) > 100) {
+            folgerePlussTall = Math.abs(Math.round($folgereStore * 0.005));
+        }
 
         if ($folgereStore < 0) {
-            folgerePlussTall = -folgerePlussTall;
-        } 
+            folgerePlussTall = -1 * folgerePlussTall;
+        }
 
         interval = setInterval(() => {
             folgereTall = folgereTall + folgerePlussTall;

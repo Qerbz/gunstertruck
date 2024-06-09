@@ -17,8 +17,25 @@
     });
 </script>
 
-<div bind:this={divElement} id="a"><div id="b"><h1>GUNSTERTRUCK</h1><br/><button on:click={startGame}>EXPERIENCE</button></div></div>
+<div bind:this={divElement} id="a"><div id="b"><h1 >GUNSTERTRUCK</h1><br/><button on:click={startGame}>EXPERIENCE</button><br><h1 style="color:white">Instrukser:</h1>
+    <p>
+        bruk "w" og "s" for å kontrollere guinness og monster<br>
+        <br>
+        <br>
+        KUNDER<br>
+        Mindreårige: Disse gir mer penger, men politiet liker det ikke<br>
+        Baddies: Disse er midt i midten<br>
+        Gammel fyllik: Disse tyster ikke til politiet, men de forventer billigere gunster<br>
+        <br>
+        <br>
+        GUNSTER<br>
+        kvalitet på en gunster avhenger av: 50/50 ratio, nøyaktig 100% fyllt opp<br>
+        pris på en gunster avhenger av: kvalitet, antall følgere og kunde.<br>
+        bedre gunster gir mer følgere
+
+    </p></div></div>
 <audio loop bind:this={audio} src="/sound/gunster_theme.m4a" />
+
 
 <style>
     /* Define the keyframes */
@@ -44,7 +61,7 @@
 
     #b {
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%,-50%);
         display: flex;
