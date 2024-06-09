@@ -13,13 +13,14 @@
     let site = 0;
     let lokasjon = "piren_pub";
     let user = {
-        cash: 0,
+        cash: 75,
         kamuflasje: false, // implemented
         reklameskilt: false, // implemented
         kurs: false, // implemented
         decoyvan: false, // implemented
         gunstermaskin: false, // implemented
         ekstrabokser: false, // implemented
+        guideline: false, 
         liv: 1,
     };
 

@@ -33,7 +33,7 @@ on:click={() => {
         if (confirm(
             json[key].beskrivelse + `
             
-Ja, vil du kjøba denne? Den koste `+json[key].price+`kr. For et røverkjøp!`
+"Ja, vil du kjøba denne? Den koste `+json[key].price+`kr. For et røverkjøp!"`
 
         )){
             user.cash -= json[key].price;
@@ -43,7 +43,7 @@ Ja, vil du kjøba denne? Den koste `+json[key].price+`kr. For et røverkjøp!`
     else{
         alert(json[key].beskrivelse+`
 
-Du har kje nok penger, lillegutt. Du trenge `+json[key].price +`kr for å kjøba denne..`);
+"Du har kje nok penger, lillegutt. Du trenge `+json[key].price +`kr for å kjøba denne.."`);
     }
 }}
 />

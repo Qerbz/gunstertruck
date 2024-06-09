@@ -14,8 +14,9 @@ export default function evaluateGunsterParts(gunsterParts){
         if (gunsterPart.type === "guinness") guinness += gunsterPart.y;
         if (gunsterPart.type === "monster") monster += gunsterPart.y;
     });
+    console.log(guinness,monster)
     if (guinness === 0 && monster === 0) return -1;
-    let quality = evaluateGunster(guinness/(guinness+monster));
+    let quality = evaluateGunster(guinness/(guinness+monster)) - Math.abs(100-(guinness+monster))/20 + 0.1;
     console.log(quality);
     return quality
 }

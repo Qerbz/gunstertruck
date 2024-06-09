@@ -100,18 +100,25 @@
         }
 
         let randomNumber = Math.random();
-        let ettersokelse;
+        let ettersokelse, penger;
         let valgtKarakter = karakterSjanser.find((sjanse) =>  sjanse.start < randomNumber && sjanse.slutt > randomNumber);
-        if (valgtKarakter.karakter === "old_drunkard") ettersokelse = 0.7;
-        else if (valgtKarakter.karakter === "baddie") ettersokelse = 1;
-        else ettersokelse = 1.6;
-
+        if (valgtKarakter.karakter === "old_drunkard") {
+            ettersokelse = 0.7;
+            penger = -0.5;
+        } else if (valgtKarakter.karakter === "baddie") {
+            ettersokelse = 1;
+            penger = 0.5;
+        } else {
+            ettersokelse = 1.6;
+            penger = 2;
+        }
 
         return {
             customer_type: valgtKarakter.karakter,
             ettersokelse: ettersokelse,
             x: null,
             y: null,
+            penger: penger,
             status: "queue",
             done: false,
         };
@@ -241,24 +248,23 @@
         servert_en_plass++;
         let gunsterScore = evaluateGunsterParts(gunsterParts) * 10;
         politiStore.update((verdi) => {
-            return verdi + kundeSomFaarServert.ettersokelse/(1+user.kamuflasje*0.5) + (10-gunsterScore)/10 + (servert_en_plass) / 100;
+            return verdi + 1.6*(kundeSomFaarServert.ettersokelse/(1+user.kamuflasje*0.5) + (10-gunsterScore)/10 + (servert_en_plass) / 100);
     });
         kundeSomFaarServert.status = "walking";
 
         kundeSomGaar.push(kundeSomFaarServert);
         kundeSomGaar = kundeSomGaar;
+
+        user.cash += (gunsterScore + gunsterScore * $folgereStore*0.002) * (user.kurs + 1) + kundeSomFaarServert.penger;
+        folgereStore.update((followers) => followers += followers * (0.02 + gunsterScore/100 + user.reklameskilt/50) + gunsterScore*4*(1+user.reklameskilt))
+        gunsterParts = [];
+
         kundeSomFaarServert = null;
-
-
         
         if (kunderIKoe[0]) {
             setKundeSomFaarServert(kunderIKoe[0]);
             kunderIKoe = kunderIKoe.slice(1, kunderIKoe.length);
         }
-        
-        user.cash += (gunsterScore + gunsterScore * $folgereStore*0.002) * (user.kurs + 1);
-        folgereStore.update((followers) => followers += followers * (0.02 + gunsterScore/100 + user.reklameskilt/50) + gunsterScore*4*(1+user.reklameskilt))
-        gunsterParts = [];
     }
 
     onMount(() => {        
@@ -284,7 +290,7 @@
     spoonRotation = 0;
 }} />
 
-<Glass x={glassX} y={glassY} {gunsterParts} />
+<Glass x={glassX} y={glassY} {gunsterParts} guideline={user.guideline} />
 
 <button class="position"
 style={` top: ${windowHeight / 1.13}px; left: ${windowWidth / 2.84}px; z-index: 999;`} 

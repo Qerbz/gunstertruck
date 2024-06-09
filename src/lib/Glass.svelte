@@ -2,7 +2,12 @@
     export let x;
     export let y;
     export let gunsterParts;
+    export let guideline;
 </script>
+
+{#if guideline}
+    <div id="guideline" />
+{/if}
 
 <div id="a" class="position" style={`top: ${y}px; left: ${x}px; `}>
     <div style={`position: absolute; width: 100%; background-color: #199791; height:100%; z-index: 1;`}/>
@@ -33,9 +38,13 @@
         z-index: 99;
         background-color: var(--monster);
     }
-    #blanding {
-        width: 100%;
+    #guideline {
+        position: absolute;
+        top: 73.95vh;
+        left: 37vw;
+        height: 1vh;
+        width: 5.8vw;
+        border-top: 1px dashed black;
         z-index: 99;
-        background: linear-gradient(to bottom, var(--guinness) 0%, var(--guinness) 45%, var(--monster) 55%, var(--monster) 100%);
     }
 </style>

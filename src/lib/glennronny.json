@@ -1,6 +1,6 @@
 {
     "gunstermaskin": {
-        "beskrivelse": "Aldri bland gunster igjen, med denne nye maskinen fra GunsterGuys A/S kan du alltid oppnå den perfekte gunster, helt uten strev",
+        "beskrivelse": "Aldri bland gunster igjen, med denne nye maskinen fra GunsterGuys A/S kan du alltid oppnå den perfekte gunster, helt uten strev \n \nPerfekt blanda gunster blir automatisk lagd",
         "price": 5000,
         "location": {
             "from_x": 345,
@@ -30,7 +30,7 @@
         }
     },
     "kamuflasje": {
-        "beskrivelse": "Med denne nyvinnende gunstertruckkamuflasjenettingen trenger du aldri igjen å bekymre deg for politiet. Eller kanskje.. Kanskje de fortsatt kan se deg, men denne burde sakke dem ned litt hvertfall.",
+        "beskrivelse": "Med denne nyvinnende gunstertruckkamuflasjenettingen trenger du aldri igjen å bekymre deg for politiet. Eller kanskje.. Kanskje de fortsatt kan se deg, men denne burde sakke dem ned litt hvertfall.\n \n-33% synlighet for politiet",
         "price": 500,
         "location": {
             "from_x": 186,
@@ -40,7 +40,7 @@
         }
     },
     "ekstrabokser": {
-        "beskrivelse": "Hell med to monsterflasker samtidig, eller to guinnessflasker samtidig. Dette burde gjøre deg til den raskeste gunstertenderen i Rogaland fylkeskommune!",
+        "beskrivelse": "Hell med to monsterflasker samtidig, eller to guinnessflasker samtidig. Dette burde gjøre deg til den raskeste gunstertenderen i Rogaland fylkeskommune!\n \n2x hellehastighet",
         "price": 200,
         "location": {
             "from_x": 240,
@@ -50,13 +50,23 @@
         }
     },
     "kurs": {
-        "beskrivelse": "Ta et kurs da. Kanskje kundene blir litt mer fornøyde med kvaliteten.",
+        "beskrivelse": "Ta et kurs da. Kanskje kundene blir litt mer fornøyde med kvaliteten.\n \n+50% penger",
         "price": 1000,
         "location": {
             "from_x": 296,
             "from_y": 115,
             "to_x": 341,
             "to_y": 140
+        }
+    },
+    "guideline": {
+        "beskrivelse": "Denne linjalen hjelper kun dem som ikke klarer øyemål. Er du ikke den smarteste kniven i skuffen? Kjøp deg en linjal\n \nViser perfekt fylling i glasset",
+        "price": 50,
+        "location": {
+            "from_x": 416,
+            "from_y": 154,
+            "to_x": 450,
+            "to_y": 200
         }
     }
 }
