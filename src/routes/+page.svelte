@@ -17,7 +17,7 @@
         reklameskilt: false, // implemented
         kurs: false, // implemented
         decoyvan: false, // implemented
-        gunstermaskin: true,
+        gunstermaskin: false, // implemented
         ekstrabokser: false, // implemented
         liv: 1,
     };

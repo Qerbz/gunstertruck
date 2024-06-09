@@ -22,6 +22,7 @@
 
 <div id="a"></div>
 {#each Object.keys(json) as key}
+{#if !user[key]}
 <ButtonOverlay 
 start_x = {json[key].location.from_x * horizontal_ratio} 
 start_y = {json[key].location.from_y * vertical_ratio} 
@@ -46,6 +47,7 @@ Du har kje nok penger, lillegutt. Du trenge `+json[key].price +`kr for å kjøba
     }
 }}
 />
+{/if}
 {/each}
 <Audio {lokasjon} {kundeSomFaarServert}></Audio>
 <style>

@@ -29,9 +29,12 @@
     function startCounter() {
         counterElement.classList.add("fadeIn");
         let folgerePlussTall = 1;
+
+        if (Math.abs($folgereStore) > 100) folgerePlussTall = Math.round($folgereStore * 0.005);
+
         if ($folgereStore < 0) {
-            folgerePlussTall = -1;
-        }
+            folgerePlussTall = -folgerePlussTall;
+        } 
 
         interval = setInterval(() => {
             folgereTall = folgereTall + folgerePlussTall;
