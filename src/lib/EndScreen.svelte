@@ -20,9 +20,14 @@
     $: vertical_ratio = windowHeight / 720;
 
     onMount(() => {
-        setTimeout(() => {
+        if ($folgereStore >= 10000000) {
+            politiElement.style.opacity = 0;
             startCounter();
-        }, 3000);
+        } else {
+            setTimeout(() => {
+                startCounter();
+            }, 3000);
+        }
     });
 
 
@@ -84,12 +89,12 @@
                 setTimeout(() => {
                     new CityRadarDot({
                         props: {
-                            x: endscreenCities[cities[i]].x * horizontal_ratio - 7,
-                            y: endscreenCities[cities[i]].y * vertical_ratio - 6
+                            x: endscreenCities[cities[i]].x * horizontal_ratio - windowHeight / 13,
+                            y: endscreenCities[cities[i]].y * vertical_ratio - windowHeight / 15
                         },
                         target: document.body
                     });
-                }, 400 * (i + 1));
+                }, 600 * (i + 1));
             } else {
                 setTimeout(() => {
                     fadeToPlayAgain();
@@ -131,7 +136,8 @@
     </div>
 </div>
 
-<div class="position" id="verdenskartet" bind:this={mapElement} />
+<div class="position" id="verdenskartet" bind:this={mapElement}>
+</div>
 
 <div bind:this={playAgainElement} class="position" id="playAgain">
     <div>

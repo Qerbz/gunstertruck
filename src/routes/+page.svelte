@@ -8,6 +8,7 @@
     import Politi from "$lib/Politi.svelte";
     import EndScreen from "$lib/EndScreen.svelte";
     import { politiStore } from "$lib/politi.js";
+    import { folgereStore } from "$lib/folgere.js";
 
     let site = 0;
     let lokasjon = "piren_pub";
@@ -31,13 +32,17 @@
     }
 
     $: checkPoliceScore($politiStore);
-
+    $: {
+        if ($folgereStore >= 10000000) {
+            site = 6;
+        }
+    }
 </script>
 
 {#if ![0, 1, 6].includes(site) }
 <div id="sitebar">
-    <button on:click={() => (site = 2)}>Gunster Truck</button>
-    <button on:click={() => (site = 3)}>Kart</button>
+    <button style="padding:10px;" on:click={() => (site = 2)}>Gunster Truck</button>
+    <button style="padding:10px;"on:click={() => (site = 3)}>Kart</button>
 </div>
 
 <Money bind:user/>

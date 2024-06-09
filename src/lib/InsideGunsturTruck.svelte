@@ -102,9 +102,9 @@
         let randomNumber = Math.random();
         let ettersokelse;
         let valgtKarakter = karakterSjanser.find((sjanse) =>  sjanse.start < randomNumber && sjanse.slutt > randomNumber);
-        if (valgtKarakter.karakter === "old_drunkard") ettersokelse = 0.01;
-        else if (valgtKarakter.karakter === "baddie") ettersokelse = 0.1;
-        else ettersokelse = 1;
+        if (valgtKarakter.karakter === "old_drunkard") ettersokelse = 0.7;
+        else if (valgtKarakter.karakter === "baddie") ettersokelse = 1;
+        else ettersokelse = 1.6;
 
 
         return {
@@ -256,7 +256,7 @@
             kunderIKoe = kunderIKoe.slice(1, kunderIKoe.length);
         }
         
-        user.cash += (gunsterScore + gunsterScore * $folgereStore*0.02) * (user.kurs + 1);
+        user.cash += (gunsterScore + gunsterScore * $folgereStore*0.002) * (user.kurs + 1);
         folgereStore.update((followers) => followers += followers * (0.02 + gunsterScore/100 + user.reklameskilt/50) + gunsterScore*4*(1+user.reklameskilt))
         gunsterParts = [];
     }
