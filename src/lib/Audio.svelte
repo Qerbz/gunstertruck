@@ -4,7 +4,7 @@
     export let lokasjon;
     export let kundeSomFaarServert;
     let generelt = ["sound/generelt/general.m4a", "sound/generelt/its_gonster_time.m4a", "sound/generelt/selger.m4a", "sound/generelt/skrik.m4a", "sound/generelt/marianne.m4a"];
-    let baddie = ["sound/karakter/baddie/baddie.m4a", "sound/karakter/baddie/baddie3.m4a", "sound/karakter/baddie/baddie4.m4a"]
+    let baddie = ["sound/karakter/baddie/baddie.m4a"]
     let child = ["sound/karakter/barn/barn.m4a", "sound/karakter/barn/barn2.m4a", "sound/karakter/barn/kid4.m4a", "sound/karakter/barn/kid5.m4a","sound/karakter/barn/kid6.m4a"]
     let oldie = ["sound/karakter/fyllik/gammel.m4a", "sound/karakter/fyllik/gammel2.m4a","sound/karakter/fyllik/gammel3.m4a", "sound/karakter/fyllik/gammel4.m4a"]
     let kvaddaa = ["sound/lokasjon/kvaddaa.m4a", "sound/lokasjon/kvaddaa 2.m4a", "sound/lokasjon/kvaddaa_3.m4a"];
